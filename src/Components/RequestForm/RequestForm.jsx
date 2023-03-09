@@ -65,10 +65,10 @@ function RequestForm(props) {
 
               <Stack spacing={10}>
                 <Button
-                  bg={"blue.400"}
+                  bg={"#799447"}
                   color={"white"}
                   _hover={{
-                    bg: "blue.500",
+                    bg: "#799460",
                   }}
                 >
                   Submit
