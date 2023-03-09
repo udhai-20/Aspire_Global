@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --nav_typography-font-family: "Open Sans";
+  --header_sticky_bg_color: #ffffff;
+  --primary-color: #799447;
+  --banner-background: rgba(214, 221, 229);
+  --h1_typography-color: #333333;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -1,0 +1,55 @@
+.banner-wrapper {
+    background-color: var(--banner-background);
+    height: 100%;
+
+}
+
+.banner-heading {
+    font-size: 2rem;
+    color: var(--h1_typography-color);
+    line-height: 1.5;
+}
+
+.banner-para {
+    margin-top: .875rem;
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.banner-btn {
+    display: inline-block;
+    margin-top: .875rem;
+    padding: 13px 29px;
+    font-size: .975rem;
+    color: #ffff;
+    background-color: var(--primary-color);
+    border-radius: .875rem;
+}
+
+
+
+.banner-first-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem !important;
+    /* border: 1px solid red; */
+
+}
+
+.banner-sec-child {
+    height: 100%;
+}
+
+.banner-sec-child img {
+    height: 100%;
+    width: 100%;
+}
+
+.banner-first-child-inside {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-end !important;
+
+}
