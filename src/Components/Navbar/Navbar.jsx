@@ -87,10 +87,10 @@ function Navbar(props) {
                   color: "orange  ",
                 }}
               >
-                Home
+                About IELTS
               </Link>
               <Link
-                to="/about"
+                to="/"
                 rounded={"md"}
                 _hover={{
                   px: "2px",
@@ -99,7 +99,7 @@ function Navbar(props) {
                   color: "orange  ",
                 }}
               >
-                Overseas
+                Program
               </Link>
 
               <Stack rounded={"md"}>
@@ -115,9 +115,9 @@ function Navbar(props) {
                   }}
                   onMouseEnter={over}
                 >
-                  Courses
+                  Test Prep
                 </Link>
-                {hover && (
+                {/* {hover && (
                   <Box onMouseLeave={end} bg={"#ffff"} className="sub_course">
                     <Text className="courses">IELTS</Text>
                     <Text className="courses">GRE</Text>
@@ -126,7 +126,7 @@ function Navbar(props) {
                     <Text className="courses">GMAT</Text>
                     <Text className="courses">PTE</Text>
                   </Box>
-                )}
+                )} */}
                 {/* <Select
                   onMouseEnter={over}
                   placeholder="Select option"
@@ -139,7 +139,7 @@ function Navbar(props) {
               </Stack>
 
               <Link
-                to="enquiry"
+                to="/"
                 rounded={"md"}
                 _hover={{
                   px: "2px",
@@ -148,10 +148,10 @@ function Navbar(props) {
                   color: "orange  ",
                 }}
               >
-                Our Teams
+                Success Stories
               </Link>
               <Link
-                to="/contact"
+                to="/blog"
                 rounded={"md"}
                 _hover={{
                   px: "2px",
@@ -160,9 +160,9 @@ function Navbar(props) {
                   color: "orange  ",
                 }}
               >
-                Abouts Us
+                Blogs
               </Link>
-              <Link
+              {/* <Link
                 to="/contact"
                 rounded={"md"}
                 _hover={{
@@ -173,7 +173,7 @@ function Navbar(props) {
                 }}
               >
                 Contact Us
-              </Link>
+              </Link> */}
             </HStack>
           </Flex>
         </Flex>
@@ -191,10 +191,10 @@ function Navbar(props) {
                   color: "orange  ",
                 }}
               >
-                Home
+                About IELTS
               </Link>
               <Link
-                to="/about"
+                to="/"
                 rounded={"md"}
                 _hover={{
                   px: "2px",
@@ -203,45 +203,44 @@ function Navbar(props) {
                   color: "orange  ",
                 }}
               >
-                About
+                Program
               </Link>
-              <Stack rounded={"md"}>
-                <Menu>
-                  <MenuButton>Products</MenuButton>
-                  <MenuList>
-                    <MenuItem minH="48px">
-                      <Image
-                        boxSize="2rem"
-                        borderRadius="full"
-                        src="https://placekitten.com/100/100"
-                        alt="Fluffybuns the destroyer"
-                        mr="12px"
-                      />
-                      <span onClick={() => navigate("/products")}>Wallet</span>
-                    </MenuItem>
-                    <MenuItem minH="40px">
-                      <Image
-                        boxSize="2rem"
-                        borderRadius="full"
-                        src="https://placekitten.com/120/120"
-                        alt="Simon the pensive"
-                        mr="12px"
-                      />
-                      <span onClick={() => navigate("/products")}>Bag</span>
-                    </MenuItem>
-                    <MenuItem minH="48px">
-                      <Image
-                        boxSize="2rem"
-                        borderRadius="full"
-                        src="https://placekitten.com/100/100"
-                        alt="Fluffybuns the destroyer"
-                        mr="12px"
-                      />
-                      <span onClick={() => navigate("/products")}>Belt</span>
-                    </MenuItem>
-                  </MenuList>
-                </Menu>
-              </Stack>
+              <Link
+                to="/"
+                rounded={"md"}
+                _hover={{
+                  px: "2px",
+                  textDecoration: "none",
+                  bg: "gray.200",
+                  color: "orange  ",
+                }}
+              >
+                Test Prep
+              </Link>
+              <Link
+                to="/"
+                rounded={"md"}
+                _hover={{
+                  px: "2px",
+                  textDecoration: "none",
+                  bg: "gray.200",
+                  color: "orange  ",
+                }}
+              >
+                Success Stories
+              </Link>
+              <Link
+                to="/blog"
+                rounded={"md"}
+                _hover={{
+                  px: "2px",
+                  textDecoration: "none",
+                  bg: "gray.200",
+                  color: "orange  ",
+                }}
+              >
+                Blogs
+              </Link>
             </Stack>
           </Box>
         ) : null}

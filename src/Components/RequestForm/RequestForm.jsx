@@ -11,10 +11,9 @@ import {
   Button,
   Heading,
   Text,
-  useColorModeValue,
   Select,
 } from "@chakra-ui/react";
-function RequestForm(props) {
+function RequestForm({ check }) {
   return (
     <>
       <Flex align={"center"} justify={"center"}>
@@ -48,18 +47,19 @@ function RequestForm(props) {
                 <FormLabel>Mobile Number</FormLabel>
                 <Input type="tel" placeholder={"Enter mobile Number"} />
               </FormControl>
-              <FormControl id="center">
+              {/* <FormControl id="center">
                 <Select placeholder="Select Center">
                   <option value="online">Online</option>
                   <option value="outside_india">OutSide India</option>
                   <option value="chennai">Chennai</option>
                 </Select>
-              </FormControl>
+              </FormControl> */}
               <FormControl id="program">
-                <Select placeholder="program">
-                  <option value="Digital_SAT">Digital SAT</option>
-                  <option value="UCAT">UCAT</option>
-                  <option value="AP">AP</option>
+                <Select placeholder="Program">
+                  <option value="ielts_calssroom">IELTS Classroom</option>
+                  <option value="ielts_online_batch">IELTS Online Batch</option>
+                  <option value="one_on_one">IELTS One-On-One</option>
+                  <option value="online_prep">IELTS Online Prep</option>
                 </Select>
               </FormControl>
 

@@ -1,0 +1,33 @@
+.header-wrapper {
+    /* border: 1px solid red; */
+    height: 50px;
+    z-index: 1;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inside-header {
+    /* border: 1px solid red; */
+    color: White;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.social_media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 465px) {
+    .header-wrapper {
+        padding: 50px;
+    }
+
+    .inside-header {
+        flex-direction: column;
+    }
+}

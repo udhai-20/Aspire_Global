@@ -1,8 +1,10 @@
 import { Box, Button, Flex, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import "./Feature.css";
+import { useNavigate } from "react-router-dom";
 
-function Features({ title, text, icon, btnName }) {
+function Features({ title, text, icon, btnName, id }) {
+  const navigate = useNavigate();
   return (
     <>
       <Stack
@@ -16,7 +18,21 @@ function Features({ title, text, icon, btnName }) {
         </Flex>
         {title && <Text fontWeight={600}>{title}</Text>}
         {text && <Text color={"gray.600"}>{text}</Text>}
-        {btnName && (
+        {btnName == "Read More" && (
+          <Box marginTop={"25px"}>
+            <Button
+              onClick={() => navigate(`/blog/${id}`)}
+              backgroundColor={"#799447"}
+              color={"white"}
+              _hover={{
+                backgroundColor: "#799447",
+              }}
+            >
+              {btnName}
+            </Button>
+          </Box>
+        )}
+        {btnName == "More detail" && (
           <Box marginTop={"25px"}>
             <Button
               backgroundColor={"#799447"}

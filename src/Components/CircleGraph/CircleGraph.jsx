@@ -6,6 +6,7 @@ function CircleGraph({ percentage }) {
     <>
       <div>
         <CircularProgressbar
+          strokeWidth={3}
           value={percentage}
           text={`${percentage / 10}%`}
           styles={buildStyles({

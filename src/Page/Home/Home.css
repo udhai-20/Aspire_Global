@@ -31,7 +31,7 @@
 
 .banner-first-child {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding: 2rem !important;
     /* border: 1px solid red; */
@@ -67,4 +67,60 @@
     bottom: 0;
     left: 50%;
     border-bottom: 4px solid var(--primary-color);
+}
+
+.testimonial-heading {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.testimonial-heading:before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    bottom: 0;
+    left: 60%;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.carousel_parent {
+    /* background-color: aqua; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.carousel_parent {
+    padding: 20px;
+}
+
+.about_acordion {
+    margin-top: 20px;
+}
+
+.faqs-heading {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.home_Wrapper {
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+    top: 2%;
+    left: 30%;
+    background-color: antiquewhite;
+
+}
+
+.check {
+    background-color: transparent;
+    opacity: 10;
+
 }
