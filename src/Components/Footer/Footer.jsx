@@ -8,6 +8,7 @@ import {
   useColorModeValue,
   Image,
   Divider,
+  // Link,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import {
@@ -18,40 +19,40 @@ import {
 
 const data = [
   {
-    title: "Our Products",
+    title: "Our Program",
     fields: [
-      { label: "Field 1", value: "All Products", link: "/products" },
-      { label: "Field 2", value: "Belt", link: "/products" },
-      { label: "Field 3", value: "Wallet", link: "/products" },
-      { label: "Field 3", value: "Bag" },
-      { label: "Field 3", value: "Cusome Bag", link: "/products" },
+      { label: "Field 1", value: "IELTS Classroom", link: "/" },
+      { label: "Field 2", value: "IELTS Online Batch", link: "/" },
+      { label: "Field 3", value: "IELTS One-On-One", link: "/" },
+      { label: "Field 3", value: "IELTS ONline Prep" },
     ],
   },
   {
     title: "Our Company",
     fields: [
       { label: "Field 4", value: "Home", link: "/" },
-      { label: "Field 5", value: "Overses", link: "/about" },
-      { label: "Field 5", value: "Courses", link: "/products" },
-      { label: "Field 5", value: "Our Teams", link: "/contact" },
-      { label: "Field 5", value: "Abouts Us", link: "/enquiry" },
-      { label: "Field 5", value: "Contact Us", link: "/enquiry" },
+      { label: "Field 5", value: "About IELTS", link: "/" },
+      { label: "Field 5", value: "Program", link: "/" },
+      { label: "Field 5", value: "Test prep", link: "/" },
+      { label: "Field 5", value: "Success Stories", link: "/" },
+      { label: "Field 5", value: "Blogs", link: "/" },
     ],
   },
   {
     title: "Contact us",
     fields: [
-      { label: "Field 6", value: "+91 442247 1672 / 5740" },
-      { label: "Field 7", value: "sales@rittzaccessories.com" },
+      { label: "Field 6", value: "+91 9591722199" },
+      { label: "Field 7", value: "aspireglobaleducation@gmail.com" },
     ],
   },
   {
     title: "Location",
     fields: [
-      { label: "Field 6", value: "Rittz Accessories" },
-      { label: "Field 7", value: "#12, Pillayar Kovil Street," },
-      { label: "Field 8", value: "Keelkattalai, Chennai-600117." },
-      { label: "Field 9", value: "Tamilnadu, India" },
+      { label: "Field 6", value: "Aspire Global education" },
+      { label: "Field 7", value: "2nd floor, CRM Soubhagya complex," },
+      { label: "Field 8", value: "above G Pulla reddy sweets," },
+      { label: "Field 8", value: "Next to spice garden bus stop," },
+      { label: "Field 9", value: "marathahalli, Bangalore" },
     ],
   },
 ];
@@ -69,20 +70,27 @@ function Footer(props) {
       <Box bg={useColorModeValue("black")}>
         <Container as={Stack} maxW={"8xl"} py={3}>
           <SimpleGrid
-            templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 1fr 1fr" }}
-            spacing={2}
+            templateColumns={{ sm: "1fr 1fr", md: "1fr 1fr 1fr 1fr 1fr" }}
+            spacing={5}
           >
             <Stack spacing={6}>
-              <Box backgroundColor="white" py={2} px={3} width={"65%"}>
+              <Box
+                backgroundColor="white"
+                display="flex"
+                align="center"
+                justify="center"
+                py={2}
+                width={"100%"}
+              >
                 <Image
-                  width="100%"
-                  height={"55px"}
+                  width="70%"
+                  height={"70px"}
                   src="/Images/aspire_logo.webp"
                 />
               </Box>
               <Text fontSize={"sm"}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2672181967973!2d80.17948431461177!3d12.954745290866907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525e70b42dc23f%3A0x8b6608b9f8d90711!2sRitz%20Accessories!5e0!3m2!1sen!2sin!4v1678254560254!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.239044702346!2d77.70777941434521!3d12.956549890865787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1236b4dd5d73%3A0x4e9ee936625ddac4!2sAspire%20Global%20Education!5e0!3m2!1sen!2sin!4v1678702373174!5m2!1sen!2sin"
                   width="300"
                   height="200"
                   allowFullScreen=""
@@ -121,20 +129,35 @@ function Footer(props) {
         >
           <Box>
             <Text color="white">
-              @{new Date().getFullYear()} Rittz Accessories. All rights
+              @{new Date().getFullYear()} Aspire Global Education. All rights
               reserved. Designed & Developed by Rittz Digital
             </Text>
           </Box>
           <Box display="flex" justifyContent="flex-end">
             <Box fontSize={"30px"} color="white">
-              <AiFillLinkedin />
+              <Link
+                to="https://www.linkedin.com/company/rittz-digital/"
+                target="_blank"
+              >
+                <AiFillLinkedin />
+              </Link>
             </Box>
-            <Box fontSize={"30px"} color="white">
-              <AiFillFacebook />
-            </Box>
-            <Box fontSize={"30px"} color="white">
-              <AiFillInstagram />
-            </Box>
+            <Link
+              to="https://www.facebook.com/rittzaccessories/?ref=rittzaccessoriesweb"
+              target="_blank"
+            >
+              <Box fontSize={"30px"} color="white">
+                <AiFillFacebook />
+              </Box>
+            </Link>
+            <Link
+              to="https://www.instagram.com/rittz.accessories/?ref=rittzaccessoriesweb"
+              target="_blank"
+            >
+              <Box fontSize={"30px"} color="white">
+                <AiFillInstagram />
+              </Box>
+            </Link>
           </Box>
         </SimpleGrid>
       </Box>

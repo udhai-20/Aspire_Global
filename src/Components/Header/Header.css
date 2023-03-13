@@ -1,6 +1,7 @@
 .header-wrapper {
     /* border: 1px solid red; */
-    height: 50px;
+    padding: 10px;
+    /* height: 50px; */
     z-index: 1;
     background-color: var(--primary-color);
     display: flex;
@@ -16,6 +17,10 @@
 
 }
 
+.header_insta {
+    color: #cc2366;
+}
+
 .social_media {
     display: flex;
     justify-content: space-between;
@@ -24,7 +29,8 @@
 
 @media only screen and (max-width: 465px) {
     .header-wrapper {
-        padding: 50px;
+        padding: 1px;
+        /* height: 100px; */
     }
 
     .inside-header {

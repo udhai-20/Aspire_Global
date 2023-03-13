@@ -112,7 +112,7 @@ function Model({ check }) {
                   name="mobilenumber"
                   value={mobilenumber}
                   onChange={handleChange}
-                  type={"email"}
+                  type={"tel"}
                 />
               </FormControl>
               <FormControl id="program" mt={4}>
@@ -141,7 +141,15 @@ function Model({ check }) {
             </ModalBody>
 
             <ModalFooter>
-              <Button type="submit" colorScheme="blue" mr={3}>
+              <Button
+                type="submit"
+                color="white"
+                _hover={{
+                  bg: "#799347",
+                }}
+                bg="#799447"
+                mr={3}
+              >
                 Submit
               </Button>
               <Button onClick={onClose}>Cancel</Button>

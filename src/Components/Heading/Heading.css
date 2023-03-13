@@ -4,11 +4,11 @@
     font-size: 30px;
 }
 
-.Headings:before {
+/* .Headings:before {
     content: "";
     position: absolute;
     width: 40%;
     bottom: 0;
     left: 60%;
     border-bottom: 4px solid var(--primary-color);
-}
+} */

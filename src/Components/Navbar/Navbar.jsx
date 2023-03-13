@@ -13,13 +13,14 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  Link,
   Image,
   Select,
   Text,
 } from "@chakra-ui/react";
 import "./Navbar.css";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 function Navbar(props) {
   const [hover, setHover] = useState(false);
@@ -65,6 +66,7 @@ function Navbar(props) {
           <HStack spacing={8} alignItems={"center"}>
             <Box>
               <Image
+                cursor="pointer"
                 onClick={() => navigate("/")}
                 src="/Images/aspire_logo.webp"
               />
@@ -78,24 +80,23 @@ function Navbar(props) {
               className="right_side"
             >
               <Link
-                to="/"
+                href="#about"
                 rounded={"md"}
                 _hover={{
-                  px: "2px",
+                  // px: "2px",
                   textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
+                  // bg: useColorModeValue("gray.200", "gray.700"),
                   color: "orange  ",
                 }}
               >
                 About IELTS
               </Link>
               <Link
-                to="/"
+                href="#program"
                 rounded={"md"}
                 _hover={{
-                  px: "2px",
                   textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
+                  // bg: useColorModeValue("gray.200", "gray.700"),
                   color: "orange  ",
                 }}
               >
@@ -105,10 +106,9 @@ function Navbar(props) {
               <Stack rounded={"md"}>
                 <Link
                   className="nav-course"
-                  to="/"
+                  href="#testprep"
                   rounded={"md"}
                   _hover={{
-                    px: "2px",
                     textDecoration: "none",
                     bg: useColorModeValue("gray.200", "gray.700"),
                     color: "orange  ",
@@ -139,10 +139,9 @@ function Navbar(props) {
               </Stack>
 
               <Link
-                to="/"
+                href="#testimonials"
                 rounded={"md"}
                 _hover={{
-                  px: "2px",
                   textDecoration: "none",
                   bg: useColorModeValue("gray.200", "gray.700"),
                   color: "orange  ",
@@ -151,10 +150,20 @@ function Navbar(props) {
                 Success Stories
               </Link>
               <Link
-                to="/blog"
+                href="#faqs"
                 rounded={"md"}
                 _hover={{
-                  px: "2px",
+                  textDecoration: "none",
+                  bg: useColorModeValue("gray.200", "gray.700"),
+                  color: "orange  ",
+                }}
+              >
+                FAQS
+              </Link>
+              <Link
+                onClick={() => navigate("/blog")}
+                rounded={"md"}
+                _hover={{
                   textDecoration: "none",
                   bg: useColorModeValue("gray.200", "gray.700"),
                   color: "orange  ",

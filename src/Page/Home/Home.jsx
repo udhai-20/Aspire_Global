@@ -23,7 +23,7 @@ let avilableProgrames = [
   {
     title: "IELTS One-on-one",
     type: "Personalised program",
-    img: "../Images/One_on_one.jpg",
+    img: "../Images/One_on_One.jpg",
   },
   {
     title: "IELTS Online Prep",
@@ -71,39 +71,39 @@ let highScore = [
     score: 85,
   },
   {
-    name: "Roger",
+    name: "Salman",
     score: 85,
   },
   {
-    name: "Shan",
+    name: "Virat",
     score: 85,
   },
   {
-    name: "Shan",
+    name: "Mohan",
     score: 85,
   },
   {
-    name: "Udhaya",
+    name: "Piyush",
     score: 80,
   },
   {
-    name: "Roger",
+    name: "Agarwal",
     score: 80,
   },
   {
-    name: "Shan",
+    name: "aiyush",
     score: 80,
   },
   {
-    name: "Roger",
+    name: "Varun",
     score: 80,
   },
   {
-    name: "Shan",
+    name: "Krishnan",
     score: 80,
   },
   {
-    name: "Shan",
+    name: "Selvin",
     score: 80,
   },
 ];
@@ -111,13 +111,11 @@ let highScore = [
 let aboutus_Accordion = [
   {
     title: "What is the IELTS test structure?",
-    desc: `The IELTS test consists of four sub-tests: Listening, Reading, Writing, and Speaking. For Academic and General Training, you take the same Listening and Speaking tests but different Reading and Writing tests,
-   The Listening, Reading, and Writing sections of all IELTS tests are completed on the same day with no breaks in between them.
-   The Speaking test, however, may be scheduled up to a week before or after the other tests.`,
+    desc: `The IELTS consists of four subtests: listening, reading, writing and speaking examinations.  academician and general training people will take the same listening and speaking tests, but different reading and writing tests. The listening, reading and writing of all IELTS exams are done on the same day without any interval. However, the Speaking test can be scheduled a week earlier or later the examination.`,
   },
   {
     title: "How is IELTS scored?",
-    desc: `The IELTS results are reported on a 9-band scale in 0.5-band increments. 1 band is the lowest and 9 band is the highest. You will receive an overall band score, as well as individual band scores for each test section – Listening, Reading, Writing, and Speaking.`,
+    desc: `The IELTS results are scored on a 9-band scale in 0.5-band increments, with 9 being the highest and 1 being the lowest. Aspirants will receive an overall band score, as well as individual band scores for each test section – (Listening, Reading, Writing, and Speaking).`,
   },
   {
     title: "How long is the IELTS?",
@@ -125,7 +123,7 @@ let aboutus_Accordion = [
   },
   {
     title: "What is the IELTS test fee?",
-    desc: `The IELTS test fee in India is INR 15.500.`,
+    desc: `The IELTS test fee in India is INR 15,500.`,
   },
   {
     title: "How can I register for IELTS?",
@@ -143,42 +141,47 @@ let faqs_Accordion = [
     desc: "The IELTS is jointly owned by the British Council, IDP: IELTS Australia, and Cambridge English.",
   },
   {
-    title: "What is the purpose of IELTS?",
-    desc: "The IELTS is designed to help you work, study or migrate to a country where English is the native language. This includes countries such as Australia, Canada, New Zealand, the UK, and the USA.",
+    title: "Who should take up IELTS exams?",
+    desc: "People who are aspirants of English language and dream to study or pursue their careers in native English speaking countries like Australia, Canada, New Zealand, the UK, and the USA.",
+  },
+  {
+    title: "The formats of IELTS? ",
+    desc: "IELTS offer two formats: IELTS Academic and IELTS General Training. IELTS Academic: Undergraduate and postgraduate students who want to continue their studies in foreign universities or colleges.IELTS General Training: People who want to  pursue secondary education , seeking job opportunities and planning to migrate to native english language speaking countries. Aspirants can apply according to their requirements.",
   },
   {
     title: "What are the modes of the IELTS test?",
-    desc: "The IELTS test is conducted via 2 different modes: Paper-based IELTS and Computer-delivered IELTS",
+    desc: "The IELTS test is conducted in two different modes: Paper-based IELTS and Computer-delivered IELTS",
   },
   {
     title: "What is Paper-based IELTS?",
-    desc: "In paper-based IELTS, you’ll take the test in a traditional manner – at a desk with question papers and answer sheets for Listening, Reading, and Writing tests in an official IELTS test centre. You’ll have to write your answers in either pen or HB pencils. The Speaking test will be carried out one-on-one with a certified IELTS examiner.",
+    desc: "It is the traditional method where students will take up the examination in the IELTS exam centre allocated to them . For Reading, writing and listening exams Question paper and answer sheets will be given and you can answer either with Pen or HB Pencil.The speaking test is conducted one-on-one with a certified IELTS examiner.",
   },
   {
     title: "What is computer-delivered IELTS?",
-    desc: "The question pattern, format, level of difficulty, and scoring remain the same as paper-based IELTS. You’ll be taking the Listening, Reading, and Writing test on a computer. The Speaking test will continue to be taken face-to-face by a certified IELTS examiner in a quiet room.",
+    desc: `It is very similar to Paper-based IELTS except the fact that it will be taken in front of the desktop. The speaking test will be conducted in a silent room, face to face with a certified IELTS examiner
+    `,
   },
   {
-    title: "How long is an IELTS score valid?",
-    desc: `An IELTS Test Report Form (TRF) is valid for two (2) years.`,
+    title: "How long does it take to get the official IELTS score?",
+    desc: `The scores of Paper-based IELTS are revealed in a period of fourteen days and the computer-delivered IELTS scores are revealed in three to five days after the examination.`,
   },
   {
-    title: "How soon can a candidate reappear for the test?",
-    desc: `A candidate may reappear for the IELTS test at any time.`,
+    title: "For How long is the IELTS score valid?",
+    desc: `IELTS scores are valid for a maximum of 2 years.
+    `,
   },
   {
-    title: "What is the age limit for IELTS?",
-    desc: `The IELTS Test is not recommended for candidates under 16 years. However, if they wish to take the test, they may.`,
+    title: "Is there an age limit for IELTS?",
+    desc: `Aspirants above the age of 16 years can apply for the examination
+    `,
   },
   {
-    title: "What is the ‘pass mark’ for the IELTS test?",
-    desc: `There is no pass or fail mark in IELTS. Scores are graded on the 9-band system. Each educational institution or organization sets its own minimum IELTS scores to meet its individual requirements.`,
+    title: "What is the Pass mark for IELTS?",
+    desc: ` Each institution sets its own minimum IELTS score to meet their requirements. The marks are scored in a 9 band system and hence there are no pass or fail mark in IELTS`,
   },
   {
     title: "What do I need to carry on the day of the IELTS test?",
-    desc: `A Valid passport (your ID proof)
-    The acknowledgment letter/admit card (IELTS registration)
-    A pencil, pen, and an eraser for the paper-based test`,
+    desc: `The aspirants shall carry with them the IELTS admit card , Identity proof and necessary stationeries for the examination.`,
   },
 ];
 
@@ -209,7 +212,7 @@ function Home(props) {
               </Box>
             </Box>
             <Box className="banner-sec-child">
-              <Image src="../Images/Banner_OPT_1.jpg" alt="banner-img" />
+              <Image src="../Images/Banner_OPT_1.png" alt="banner-img" />
             </Box>
             <Box>
               <RequestForm />
@@ -218,7 +221,7 @@ function Home(props) {
         </Box>
         {/* Choose the Program */}
         <Box>
-          <Container maxW={"7xl"}>
+          <Container id="program" maxW={"7xl"}>
             <Box className="ourwork-Wrapper" my={"15px"}>
               <Container maxW={"7xl"}>
                 <Heading title={"Choose the Program"} />
@@ -250,7 +253,7 @@ function Home(props) {
           </Container>
         </Box>
         {/* 6 Reasons Why You Must Join Inspirus IELTS Prep */}
-        <Box>
+        <Box id="testprep">
           <Box className="reason-section-wrapper" my={"15px"}>
             <Container maxW={"7xl"}>
               <Heading title={"Why Choose ASPIRE ?"} />
@@ -311,7 +314,7 @@ function Home(props) {
           </Box>
         </Box>
         {/* {testimonial sections} */}
-        <Box>
+        <Box id="testimonials">
           <Box
             className="reason-section-wrapper"
             marginTop={"35px"}
@@ -328,7 +331,7 @@ function Home(props) {
           </Box>
         </Box>
         {/* about us */}
-        <Box className="about-section-wrapper" marginTop={"35px"}>
+        <Box id="about" className="about-section-wrapper" marginTop={"35px"}>
           <Container maxW={"7xl"}>
             <Text className="recent-heading" textAlign={"left"}>
               About IELTS™
@@ -346,6 +349,7 @@ function Home(props) {
         </Box>
         {/* faq Section */}
         <Box
+          id="faqs"
           className="about-section-wrapper"
           marginBottom={"35px"}
           marginTop={"35px"}

@@ -6,18 +6,23 @@ import Meta from "../../Components/Meta/Meta";
 const avilableBlogs = [
   {
     title: "IELTS vs TOEFL",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo_Sb0daGNaXESEzXhlljECxzbaiozf3D36Q&usqp=CAU",
+    img: "../Images/Blog_1.jpg",
     blogNumber: "1",
   },
   {
-    title: "IELTS vs TOEFL",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo_Sb0daGNaXESEzXhlljECxzbaiozf3D36Q&usqp=CAU",
+    title: "TOEFL - BE THE PRO OF YOUR CAREER",
+    img: "../Images/Blog_2.jpg",
     blogNumber: "2",
   },
   {
-    title: "IELTS vs TOEFL",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo_Sb0daGNaXESEzXhlljECxzbaiozf3D36Q&usqp=CAU",
+    title: "A Guide to ace the IELTS Exam",
+    img: "../Images/Blog_3.jpg",
     blogNumber: "3",
+  },
+  {
+    title: "TOEFL - BE THE PRO OF YOUR CAREER",
+    img: "../Images/Blog_4.jpg",
+    blogNumber: "4",
   },
 ];
 
@@ -27,7 +32,7 @@ function Blog(props) {
       <Meta title={"Blogs"} />
       <Box className="blog-wrapper">
         <Container maxW={"8xl"} marginTop={"2rem"} marginBottom={"2rem"}>
-          <SimpleGrid columns={{ base: 1, md: 3 }} gap={"20"}>
+          <SimpleGrid columns={{ base: 1, md: 4 }} gap={"20"}>
             {avilableBlogs.map((item) => {
               return (
                 <Box>

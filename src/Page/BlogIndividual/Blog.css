@@ -1,12 +1,23 @@
-.indvidual_blog_wrapper {
-    border: 1px solid red;
-
-}
-
-.indv_blog_inside {
+/* .indv_blog_inside {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+} */
+
+.blog_heading {
+    margin-top: 10px;
+    font-weight: 500;
+
+
+}
+
+.blog_ans {
+    margin-top: 10px;
+}
+
+.blogs_parent:last-child {
+    margin-bottom: 20px;
 
 }

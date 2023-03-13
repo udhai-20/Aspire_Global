@@ -12,7 +12,6 @@ function CircleGraph({ percentage }) {
           styles={buildStyles({
             textColor: "green",
             pathColor: "#799447",
-            // trailColor: "gold",
           })}
         />
       </div>
