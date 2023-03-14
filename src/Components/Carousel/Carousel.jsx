@@ -16,7 +16,7 @@ let testimonialCarousel = [
     score: "IELTS BAND ACHIEVED 8.5",
     img: "../Images/testimonial_2.jpg",
     comment:
-      "Aspire is one of the best places to study in Bangalore to live your dreams of Abroad. I Am eternally grateful to my IELTS teachers who not only taught me the subject but inspired me to pursue my dreams. Every single minute spent here was worth every penny.",
+      "Aspire is one of the best places to study in Bangalore to live your dreams of Abroad. I Am eternally grateful to my IELTS teachers who not only taught me the subject but inspired me to pursue my dreams. Every single minute spent here was worth every penny Thank you team Aspire Bangalore.",
   },
 ];
 const handleDragStart = (e) => e.preventDefault();

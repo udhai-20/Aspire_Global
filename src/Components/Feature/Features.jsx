@@ -17,7 +17,11 @@ function Features({ title, text, icon, btnName, id }) {
           {icon}
         </Flex>
         {title && <Text fontWeight={600}>{title}</Text>}
-        {text && <Text color={"gray.600"}>{text}</Text>}
+        {text && (
+          <Text textAlign={"center"} color={"gray.600"}>
+            {text}
+          </Text>
+        )}
         {btnName == "Read More" && (
           <Box marginTop={"25px"}>
             <Button

@@ -52,7 +52,7 @@ const data = [
       { label: "Field 7", value: "2nd floor, CRM Soubhagya complex," },
       { label: "Field 8", value: "above G Pulla reddy sweets," },
       { label: "Field 8", value: "Next to spice garden bus stop," },
-      { label: "Field 9", value: "marathahalli, Bangalore" },
+      { label: "Field 9", value: "Marathahalli, Bangalore" },
     ],
   },
 ];
@@ -77,13 +77,13 @@ function Footer(props) {
               <Box
                 backgroundColor="white"
                 display="flex"
-                align="center"
-                justify="center"
-                py={2}
+                alignItems="center"
+                justifyContent="center"
+                py={1}
                 width={"100%"}
               >
                 <Image
-                  width="70%"
+                  width={{ md: "80%", base: "50%" }}
                   height={"70px"}
                   src="/Images/aspire_logo.webp"
                 />
@@ -91,7 +91,7 @@ function Footer(props) {
               <Text fontSize={"sm"}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.239044702346!2d77.70777941434521!3d12.956549890865787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1236b4dd5d73%3A0x4e9ee936625ddac4!2sAspire%20Global%20Education!5e0!3m2!1sen!2sin!4v1678702373174!5m2!1sen!2sin"
-                  width="300"
+                  width="100%"
                   height="200"
                   allowFullScreen=""
                   className="border-0 w-100"
@@ -104,7 +104,7 @@ function Footer(props) {
               <Stack align={"flex-start"} key={elem.title} color="white">
                 <ListHeader>{elem.title}</ListHeader>
                 {elem.fields.map((item) => (
-                  <Box style={{ cursor: "pointer" }} key={item.lable}>
+                  <Box style={{ cursor: "pointer" }} key={item.value}>
                     <Link to={item.link || "#"}>{item.value}</Link>
                   </Box>
                 ))}
@@ -126,8 +126,9 @@ function Footer(props) {
           width="90%"
           display="flex"
           justifyContent="center"
+          px={3}
         >
-          <Box>
+          <Box display="flex" justifyContent="center">
             <Text color="white">
               @{new Date().getFullYear()} Aspire Global Education. All rights
               reserved. Designed & Developed by Rittz Digital

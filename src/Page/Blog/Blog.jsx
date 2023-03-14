@@ -16,12 +16,12 @@ const avilableBlogs = [
   },
   {
     title: "A Guide to ace the IELTS Exam",
-    img: "../Images/Blog_3.jpg",
+    img: "../Images/BLog_3.jpg",
     blogNumber: "3",
   },
   {
     title: "TOEFL - BE THE PRO OF YOUR CAREER",
-    img: "../Images/Blog_4.jpg",
+    img: "../Images/BLog_4.jpg",
     blogNumber: "4",
   },
 ];
@@ -35,7 +35,7 @@ function Blog(props) {
           <SimpleGrid columns={{ base: 1, md: 4 }} gap={"20"}>
             {avilableBlogs.map((item) => {
               return (
-                <Box>
+                <Box key={item.title}>
                   <Features
                     icon={
                       <Image

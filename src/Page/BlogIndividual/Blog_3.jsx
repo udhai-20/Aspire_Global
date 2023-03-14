@@ -29,7 +29,7 @@ function Blog_3(props) {
                   alignItems={"center"}
                   mb={2}
                 >
-                  <Image src="../Images/Blog_3.jpg" />
+                  <Image src="../Images/BLog_3.jpg" />
                 </Box>
                 <Box>
                   <Text fontSize={"1rem"} lineHeight={1.9}>

@@ -11,7 +11,7 @@
 }
 
 .banner-para {
-    margin-top: .875rem;
+    margin-top: .2rem;
     font-size: 1.2rem;
     color: #000000;
     line-height: 1.6;
@@ -19,7 +19,7 @@
 
 .banner-btn {
     display: inline-block;
-    margin-top: .875rem;
+    margin-top: .4rem;
     padding: 13px 29px;
     font-size: .975rem;
     color: #ffff;
@@ -45,6 +45,8 @@
 .banner-sec-child img {
     height: 100%;
     width: 100%;
+    margin-top: -30px;
+    margin-bottom: -10px;
 }
 
 .banner-first-child-inside {
@@ -75,14 +77,6 @@
     font-size: 30px;
 }
 
-/* .testimonial-heading:before {
-    content: "";
-    position: absolute;
-    width: 40%;
-    bottom: 0;
-    left: 60%;
-    border-bottom: 4px solid var(--primary-color);
-} */
 
 .carousel_parent {
     /* background-color: aqua; */

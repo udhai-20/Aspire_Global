@@ -36,4 +36,13 @@
     .inside-header {
         flex-direction: column;
     }
+
+    .social_media {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+    }
 }

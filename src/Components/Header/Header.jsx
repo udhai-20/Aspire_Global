@@ -21,19 +21,23 @@ function Header(props) {
                 href="https://www.linkedin.com/company/aspire-global-education/"
                 target="_blank"
               >
-                <AiFillLinkedin color="blue" fontSize={"30px"} />
+                <AiFillLinkedin color="white" fontSize={"30px"} />
               </Link>
               <Link
                 href="https://www.youtube.com/@aspireglobaleducation"
                 target="_blank"
               >
-                <AiFillYoutube color="red" fontSize={"30px"} />
+                <AiFillYoutube color="white" fontSize={"30px"} />
               </Link>
               <Link
                 href="https://www.instagram.com/aspireglobal_education/"
                 target="_blank"
               >
-                <AiFillInstagram className="header_insta" fontSize={"30px"} />
+                <AiFillInstagram
+                  color="white"
+                  className="header_insta"
+                  fontSize={"30px"}
+                />
               </Link>
             </Box>
           </Box>

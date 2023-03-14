@@ -5,19 +5,22 @@
     padding: 15px;
     border: 3px solid var(--primary-color);
     border-radius: 5px;
+    /* height: 500px; */
 }
 
 .carouselItem__img {
     border-radius: 10px;
-    width: 30%;
+    width: 250px;
+    height: 200px;
     margin-bottom: 5px;
-    box-shadow: 0px 0px 5px black;
+    /* box-shadow: 0px 0px 5px black; */
 }
 
 .image_container {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .carouselItem__name {

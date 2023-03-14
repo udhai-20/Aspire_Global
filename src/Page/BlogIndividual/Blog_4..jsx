@@ -44,7 +44,7 @@ function Blog_4(props) {
                   alignItems={"center"}
                   mb={2}
                 >
-                  <Image src="../Images/Blog_4.jpg" />
+                  <Image src="../Images/BLog_4.jpg" />
                 </Box>
               </Box>
               {data.map((el) => {

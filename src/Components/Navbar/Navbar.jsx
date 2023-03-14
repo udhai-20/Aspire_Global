@@ -20,12 +20,14 @@ import {
 } from "@chakra-ui/react";
 import "./Navbar.css";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 function Navbar(props) {
   const [hover, setHover] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  console.log("  location:", pathname);
   const over = () => {
     setHover(true);
   };
@@ -79,87 +81,148 @@ function Navbar(props) {
               display={{ base: "none", md: "flex" }}
               className="right_side"
             >
-              <Link
-                href="#about"
-                rounded={"md"}
-                _hover={{
-                  // px: "2px",
-                  textDecoration: "none",
-                  // bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "orange  ",
-                }}
-              >
-                About IELTS
-              </Link>
-              <Link
-                href="#program"
-                rounded={"md"}
-                _hover={{
-                  textDecoration: "none",
-                  // bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "orange  ",
-                }}
-              >
-                Program
-              </Link>
-
-              <Stack rounded={"md"}>
+              {pathname == "/blog" ? (
                 <Link
-                  className="nav-course"
-                  href="#testprep"
+                  // href="/#about2"
+                  onClick={() => {
+                    navigate("/#about");
+                  }}
                   rounded={"md"}
                   _hover={{
                     textDecoration: "none",
-                    bg: useColorModeValue("gray.200", "gray.700"),
                     color: "orange  ",
                   }}
-                  onMouseEnter={over}
                 >
-                  Test Prep
+                  About IELTS
                 </Link>
-                {/* {hover && (
-                  <Box onMouseLeave={end} bg={"#ffff"} className="sub_course">
-                    <Text className="courses">IELTS</Text>
-                    <Text className="courses">GRE</Text>
-                    <Text className="courses">TOEFL</Text>
-                    <Text className="courses">SAT</Text>
-                    <Text className="courses">GMAT</Text>
-                    <Text className="courses">PTE</Text>
-                  </Box>
-                )} */}
-                {/* <Select
-                  onMouseEnter={over}
-                  placeholder="Select option"
-                  variant="unstyled"
+              ) : (
+                <Link
+                  href="/#about"
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange  ",
+                  }}
                 >
-                  <option value="option1">Option 1</option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
-                </Select> */}
-              </Stack>
+                  About IELTS
+                </Link>
+              )}
 
-              <Link
-                href="#testimonials"
-                rounded={"md"}
-                _hover={{
-                  textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "orange  ",
-                }}
-              >
-                Success Stories
-              </Link>
-              <Link
-                href="#faqs"
-                rounded={"md"}
-                _hover={{
-                  textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "orange  ",
-                }}
-              >
-                FAQS
-              </Link>
+              {pathname == "/blog" ? (
+                <Link
+                  onClick={() => navigate("/#program")}
+                  // href="#program"
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange  ",
+                  }}
+                >
+                  Program
+                </Link>
+              ) : (
+                <Link
+                  href="#program"
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange  ",
+                  }}
+                >
+                  Program
+                </Link>
+              )}
+
+              <Stack rounded={"md"}>
+                {pathname == "/blog" ? (
+                  <Link
+                    className="nav-course"
+                    // href="#testprep"
+                    onClick={() => navigate("/#testprep")}
+                    rounded={"md"}
+                    _hover={{
+                      textDecoration: "none",
+                      // bg: useColorModeValue("gray.200", "gray.700"),
+                      color: "orange  ",
+                    }}
+                    onMouseEnter={over}
+                  >
+                    Test Prep
+                  </Link>
+                ) : (
+                  <Link
+                    className="nav-course"
+                    href="#testprep"
+                    // onClick={() => navigate("/#testprep")}
+                    rounded={"md"}
+                    _hover={{
+                      textDecoration: "none",
+                      // bg: useColorModeValue("gray.200", "gray.700"),
+                      color: "orange  ",
+                    }}
+                    onMouseEnter={over}
+                  >
+                    Test Prep
+                  </Link>
+                )}
+              </Stack>
+              {pathname == "/blog" ? (
+                <Link
+                  // href="#testimonials"
+                  onClick={() => navigate("/#testimonials")}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    // bg: useColorModeValue("gray.200", "gray.700"),
+                    color: "orange  ",
+                  }}
+                >
+                  Success Stories
+                </Link>
+              ) : (
+                <Link
+                  href="#testimonials"
+                  // onClick={() => navigate("/#testimonials")}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    // bg: useColorModeValue("gray.200", "gray.700"),
+                    color: "orange  ",
+                  }}
+                >
+                  Success Stories
+                </Link>
+              )}
+
+              {pathname == "/blog" ? (
+                <Link
+                  onClick={() => {
+                    navigate("/");
+                    navigate("/#faqs");
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    // bg: useColorModeValue("gray.200", "gray.700"),
+                    color: "orange  ",
+                  }}
+                >
+                  FAQS
+                </Link>
+              ) : (
+                <Link
+                  href="#faqs"
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    // bg: useColorModeValue("gray.200", "gray.700"),
+                    color: "orange  ",
+                  }}
+                >
+                  FAQS
+                </Link>
+              )}
+
               <Link
                 onClick={() => navigate("/blog")}
                 rounded={"md"}
@@ -171,18 +234,6 @@ function Navbar(props) {
               >
                 Blogs
               </Link>
-              {/* <Link
-                to="/contact"
-                rounded={"md"}
-                _hover={{
-                  px: "2px",
-                  textDecoration: "none",
-                  bg: useColorModeValue("gray.200", "gray.700"),
-                  color: "orange  ",
-                }}
-              >
-                Contact Us
-              </Link> */}
             </HStack>
           </Flex>
         </Flex>
@@ -190,61 +241,174 @@ function Navbar(props) {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
+              {pathname == "/blog" ? (
+                <Link
+                  href="/#about"
+                  onClick={() => {
+                    navigate("/#about");
+                    return onClose();
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  About IELTS
+                </Link>
+              ) : (
+                <Link
+                  href="/#about"
+                  onClick={() => {
+                    navigate("/#about");
+                    return onClose();
+                  }}
+                  // onClick={() => onClose()}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  About IELTS
+                </Link>
+              )}
+
+              {pathname == "/blog" ? (
+                <Link
+                  href="/#program"
+                  onClick={() => {
+                    navigate("/#program");
+                    return onClose();
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  Program
+                </Link>
+              ) : (
+                <Link
+                  href="/#program"
+                  onClick={() => {
+                    navigate("/#program");
+                    return onClose();
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  Program
+                </Link>
+              )}
+              {pathname == "/blog" ? (
+                <Link
+                  href="/#testprep"
+                  onClick={() => {
+                    navigate("/#testprep");
+                    return onClose();
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  Test Prep
+                </Link>
+              ) : (
+                <Link
+                  href="/#testprep"
+                  onClick={() => {
+                    navigate("/#testprep");
+                    return onClose();
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  Test Prep
+                </Link>
+              )}
+
+              {pathname == "/blog" ? (
+                <Link
+                  href="/#testimonials"
+                  onClick={() => {
+                    navigate("/#testimonials");
+                    return onClose();
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  Success Stories
+                </Link>
+              ) : (
+                <Link
+                  href="/#testimonials"
+                  onClick={() => {
+                    navigate("/#testimonials");
+                    return onClose();
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  Success Stories
+                </Link>
+              )}
+
+              {pathname == "/blog" ? (
+                <Link
+                  href="/#faqs"
+                  onClick={() => {
+                    navigate("/#faqs");
+                    return onClose();
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  Faqs
+                </Link>
+              ) : (
+                <Link
+                  href="/#faqs"
+                  onClick={() => {
+                    navigate("/#faqs");
+                    return onClose();
+                  }}
+                  rounded={"md"}
+                  _hover={{
+                    textDecoration: "none",
+                    color: "orange",
+                  }}
+                >
+                  Faqs
+                </Link>
+              )}
               <Link
-                to="/"
-                rounded={"md"}
-                _hover={{
-                  px: "2px",
-                  textDecoration: "none",
-                  bg: "gray.200",
-                  color: "orange  ",
+                onClick={() => {
+                  navigate("/blog");
+                  onClose();
                 }}
-              >
-                About IELTS
-              </Link>
-              <Link
-                to="/"
                 rounded={"md"}
                 _hover={{
-                  px: "2px",
                   textDecoration: "none",
-                  bg: "gray.200",
-                  color: "orange  ",
-                }}
-              >
-                Program
-              </Link>
-              <Link
-                to="/"
-                rounded={"md"}
-                _hover={{
-                  px: "2px",
-                  textDecoration: "none",
-                  bg: "gray.200",
-                  color: "orange  ",
-                }}
-              >
-                Test Prep
-              </Link>
-              <Link
-                to="/"
-                rounded={"md"}
-                _hover={{
-                  px: "2px",
-                  textDecoration: "none",
-                  bg: "gray.200",
-                  color: "orange  ",
-                }}
-              >
-                Success Stories
-              </Link>
-              <Link
-                to="/blog"
-                rounded={"md"}
-                _hover={{
-                  px: "2px",
-                  textDecoration: "none",
-                  bg: "gray.200",
+                  // bg: useColorModeValue("gray.200", "gray.700"),
                   color: "orange  ",
                 }}
               >

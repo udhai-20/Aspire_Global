@@ -8,27 +8,32 @@ import CircleGraph from "../../Components/CircleGraph/CircleGraph";
 import Carousel from "../../Components/Carousel/Carousel";
 import AccordionsMenu from "../../Components/AccordionMenu/AccordionsMenu";
 import Model from "../../Components/Model/Model";
+import { useLocation } from "react-router-dom";
 
 let avilableProgrames = [
   {
     title: "IELTS Classroom",
     type: "In-person program",
     img: "../Images/Class_Room.jpg",
+    id: "1",
   },
   {
     title: "IELTS Live Online Batch",
     type: "Live online program",
     img: "../Images/Online_Class.jpg",
+    id: "2",
   },
   {
     title: "IELTS One-on-one",
     type: "Personalised program",
     img: "../Images/One_on_One.jpg",
+    id: "3",
   },
   {
     title: "IELTS Online Prep",
     type: "Self-learning program",
     img: "../Images/Online_Prep.jpg",
+    id: "4",
   },
 ];
 let whyChooseusArray = [
@@ -59,7 +64,7 @@ let whyChooseusArray = [
 ];
 let highScore = [
   {
-    name: "Udhaya",
+    name: "Shubam",
     score: 85,
   },
   {
@@ -67,45 +72,45 @@ let highScore = [
     score: 85,
   },
   {
-    name: "Shan",
-    score: 85,
+    name: "Abdul",
+    score: 80,
   },
   {
     name: "Salman",
-    score: 85,
-  },
-  {
-    name: "Virat",
-    score: 85,
-  },
-  {
-    name: "Mohan",
-    score: 85,
-  },
-  {
-    name: "Piyush",
     score: 80,
   },
-  {
-    name: "Agarwal",
-    score: 80,
-  },
-  {
-    name: "aiyush",
-    score: 80,
-  },
-  {
-    name: "Varun",
-    score: 80,
-  },
-  {
-    name: "Krishnan",
-    score: 80,
-  },
-  {
-    name: "Selvin",
-    score: 80,
-  },
+  // {
+  //   name: "Virat",
+  //   score: 85,
+  // },
+  // {
+  //   name: "Mohan",
+  //   score: 85,
+  // },
+  // {
+  //   name: "Piyush",
+  //   score: 80,
+  // },
+  // {
+  //   name: "Agarwal",
+  //   score: 80,
+  // },
+  // {
+  //   name: "aiyush",
+  //   score: 80,
+  // },
+  // {
+  //   name: "Varun",
+  //   score: 80,
+  // },
+  // {
+  //   name: "Krishnan",
+  //   score: 80,
+  // },
+  // {
+  //   name: "Selvin",
+  //   score: 80,
+  // },
 ];
 
 let aboutus_Accordion = [
@@ -186,13 +191,15 @@ let faqs_Accordion = [
 ];
 
 function Home(props) {
+  const pathname = useLocation();
+  console.log("pathname:", pathname);
   const [popup, setPopup] = useState(true);
   return (
     <>
       <Box className="home_Wrapper ">
         {/* banner section */}
         <Box className="banner-wrapper " mb={5}>
-          <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={2} height={"100%"}>
+          <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={1} height={"100%"}>
             <Box className="banner-first-child" p={3} display={"flex"}>
               <Box
                 display={"flex"}
@@ -224,12 +231,12 @@ function Home(props) {
           <Container id="program" maxW={"7xl"}>
             <Box className="ourwork-Wrapper" my={"15px"}>
               <Container maxW={"7xl"}>
-                <Heading title={"Choose the Program"} />
+                <Heading title={"Choose The Program"} />
                 <Box marginTop={"20px"} p={4}>
                   <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
                     {avilableProgrames.map((item) => {
                       return (
-                        <Box>
+                        <Box key={item.id}>
                           <Features
                             icon={
                               <Image
@@ -259,8 +266,8 @@ function Home(props) {
               <Heading title={"Why Choose ASPIRE ?"} />
               <SimpleGrid
                 my={"20px"}
-                columns={{ base: 1, md: 4, lg: 6 }}
-                spacing={10}
+                columns={{ base: 2, md: 4, lg: 6 }}
+                spacing={5}
               >
                 {whyChooseusArray.map((item) => {
                   return (
@@ -294,11 +301,7 @@ function Home(props) {
               <Text className="recent-heading" textAlign={"left"}>
                 Our Recent High Scores
               </Text>
-              <SimpleGrid
-                my={"20px"}
-                columns={{ base: 1, md: 4, lg: 6, sm: 3 }}
-                spacing={10}
-              >
+              <SimpleGrid my={"20px"} columns={{ base: 2, md: 4 }} spacing={10}>
                 {highScore.map((item, i) => {
                   return (
                     <Box key={i + 1}>
@@ -370,7 +373,7 @@ function Home(props) {
           </Container>
         </Box>
 
-        {popup && (
+        {pathname.hash == "" && popup && (
           <Box className="popup">
             <Box>
               <Model />
