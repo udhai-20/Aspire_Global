@@ -4,11 +4,12 @@ import "./Home.css";
 import RequestForm from "../../Components/RequestForm/RequestForm";
 import Features from "../../Components/Feature/Features";
 import Heading from "../../Components/Heading/Heading";
-import CircleGraph from "../../Components/CircleGraph/CircleGraph";
+import CircleGraph from "../../Components/IeltsScoreCard/IeltsScoreCard";
 import Carousel from "../../Components/Carousel/Carousel";
 import AccordionsMenu from "../../Components/AccordionMenu/AccordionsMenu";
 import Model from "../../Components/Model/Model";
 import { useLocation } from "react-router-dom";
+import IeltsScoreCard from "../../Components/IeltsScoreCard/IeltsScoreCard";
 
 let avilableProgrames = [
   {
@@ -64,53 +65,35 @@ let whyChooseusArray = [
 ];
 let highScore = [
   {
-    name: "Shubam",
-    score: 85,
+    name: "Najeeb Mohamed",
+    img: "./Images/student_2.png",
+    listening: 9.0,
+    reading: 9.0,
+    writing: 7.0,
+    speaking: 7.0,
+    bandscore: 8.0,
+    cefrlevel: "C1",
   },
   {
-    name: "Roger",
-    score: 85,
+    name: "Shahid Nazeer",
+    img: "./Images/student_3.png",
+    listening: 9.0,
+    reading: 7.5,
+    writing: 7.5,
+    speaking: 6.5,
+    bandscore: 7.5,
+    cefrlevel: "C1",
   },
   {
-    name: "Abdul",
-    score: 80,
+    name: "Ashwathi",
+    img: "./Images/student_4.png",
+    listening: 8.5,
+    reading: 7.5,
+    writing: 7.0,
+    speaking: 7.5,
+    bandscore: 7.5,
+    cefrlevel: "C1",
   },
-  {
-    name: "Salman",
-    score: 80,
-  },
-  // {
-  //   name: "Virat",
-  //   score: 85,
-  // },
-  // {
-  //   name: "Mohan",
-  //   score: 85,
-  // },
-  // {
-  //   name: "Piyush",
-  //   score: 80,
-  // },
-  // {
-  //   name: "Agarwal",
-  //   score: 80,
-  // },
-  // {
-  //   name: "aiyush",
-  //   score: 80,
-  // },
-  // {
-  //   name: "Varun",
-  //   score: 80,
-  // },
-  // {
-  //   name: "Krishnan",
-  //   score: 80,
-  // },
-  // {
-  //   name: "Selvin",
-  //   score: 80,
-  // },
 ];
 
 let aboutus_Accordion = [
@@ -301,14 +284,20 @@ function Home(props) {
               <Text className="recent-heading" textAlign={"left"}>
                 Our Recent High Scores
               </Text>
-              <SimpleGrid my={"20px"} columns={{ base: 2, md: 4 }} spacing={10}>
+              <SimpleGrid my={"20px"} columns={{ base: 1, md: 3 }} spacing={10}>
                 {highScore.map((item, i) => {
                   return (
                     <Box key={i + 1}>
-                      <CircleGraph percentage={item.score} />
-                      <Text fontWeight={600} textAlign={"center"} mt={2}>
-                        {item.name}
-                      </Text>
+                      <IeltsScoreCard
+                        name={item.name}
+                        listening={item.listening}
+                        reading={item.reading}
+                        writing={item.reading}
+                        speaking={item.speaking}
+                        bandscore={item.bandscore}
+                        cefrlevel={item.cefrlevel}
+                        imgLink={item.img}
+                      />
                     </Box>
                   );
                 })}

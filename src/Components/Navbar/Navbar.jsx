@@ -98,10 +98,13 @@ function Navbar(props) {
               ) : (
                 <Link
                   href="/#about"
+                  onClick={() => {
+                    navigate("/#about");
+                  }}
                   rounded={"md"}
                   _hover={{
                     textDecoration: "none",
-                    color: "orange  ",
+                    color: "orange",
                   }}
                 >
                   About IELTS
@@ -122,11 +125,14 @@ function Navbar(props) {
                 </Link>
               ) : (
                 <Link
-                  href="#program"
+                  href="/#program"
+                  onClick={() => {
+                    navigate("/#program");
+                  }}
                   rounded={"md"}
                   _hover={{
                     textDecoration: "none",
-                    color: "orange  ",
+                    color: "orange",
                   }}
                 >
                   Program
@@ -151,16 +157,15 @@ function Navbar(props) {
                   </Link>
                 ) : (
                   <Link
-                    className="nav-course"
-                    href="#testprep"
-                    // onClick={() => navigate("/#testprep")}
+                    href="/#testprep"
+                    onClick={() => {
+                      navigate("/#testprep");
+                    }}
                     rounded={"md"}
                     _hover={{
                       textDecoration: "none",
-                      // bg: useColorModeValue("gray.200", "gray.700"),
-                      color: "orange  ",
+                      color: "orange",
                     }}
-                    onMouseEnter={over}
                   >
                     Test Prep
                   </Link>
@@ -181,13 +186,14 @@ function Navbar(props) {
                 </Link>
               ) : (
                 <Link
-                  href="#testimonials"
-                  // onClick={() => navigate("/#testimonials")}
+                  href="/#testimonials"
+                  onClick={() => {
+                    navigate("/#testimonials");
+                  }}
                   rounded={"md"}
                   _hover={{
                     textDecoration: "none",
-                    // bg: useColorModeValue("gray.200", "gray.700"),
-                    color: "orange  ",
+                    color: "orange",
                   }}
                 >
                   Success Stories
@@ -211,15 +217,17 @@ function Navbar(props) {
                 </Link>
               ) : (
                 <Link
-                  href="#faqs"
+                  href="/#faqs"
+                  onClick={() => {
+                    navigate("/#faqs");
+                  }}
                   rounded={"md"}
                   _hover={{
                     textDecoration: "none",
-                    // bg: useColorModeValue("gray.200", "gray.700"),
-                    color: "orange  ",
+                    color: "orange",
                   }}
                 >
-                  FAQS
+                  Faqs
                 </Link>
               )}
 
@@ -263,7 +271,6 @@ function Navbar(props) {
                     navigate("/#about");
                     return onClose();
                   }}
-                  // onClick={() => onClose()}
                   rounded={"md"}
                   _hover={{
                     textDecoration: "none",
